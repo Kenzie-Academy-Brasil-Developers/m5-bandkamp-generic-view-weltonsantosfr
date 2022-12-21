@@ -5,10 +5,10 @@ from users.serializers import UserSerializer
 
 
 class AlbumSerializer(serializers.ModelSerializer):
-    user = UserSerializer(read_only=True)
+    # user = UserSerializer(read_only=True)
     class Meta:
         model= Album
-        fields = '__all__'
+        fields = ["id", "user_id", "name", "year"]
         
         
         
